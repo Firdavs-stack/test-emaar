@@ -30,7 +30,7 @@ export const compileScss = () => {
 
 export const packScripts = () => {
    return gulp
-      .src(["node_modules/swiper/swiper-bundle.min.js", "app/js/**/*.js"])
+      .src(["node_modules/swiper/swiper-bundle.min.js", "app/js/main.js"])
       .pipe(concat("main.min.js"))
       .pipe(uglify())
       .pipe(gulp.dest("app/js"))
