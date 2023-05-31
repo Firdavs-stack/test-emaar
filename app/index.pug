@@ -1,0 +1,97 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        link(rel="stylesheet", href="./css/styles.min.css")
+        title EMAAR
+    body
+        .header
+            .container
+                .header__textInfo
+                    a(class='logo header__logo')
+                        img(src="./images/icons/filled-logo.svg", alt="logo image")
+                    div(class='header__line')
+                    h2(class='subtitle header__subtitle')
+                    div(class='header__adv adv')
+                        each info in [['20%','to book a unit'],['4 years','paymant plan'],['aed 2.2mln','prices from']]
+                            .header__advItem
+                                h4.adv__title= info[0]
+                                p.adv__text= info[1]
+                    a(class='header__link link') See project
+        .available
+            .container 
+                .available__items
+                    .available__item
+                        .available__imagebox
+                            img(src="./images/avialines.png", alt="available image",class='available__image')  
+                    .available__item 
+                        h3(class='available__title title') AVAILABLE HOMES FOR SALE BY EMAAR PROPERTIES
+                        p(class='available__text text') Emaar Properties is one of the world’s most valuable and admired real estate development companies. With proven competencies in properties, shopping malls & retail and hospitality & leisure.Emaar Properties is one of the world’s most valuable and admired real estate development companies
+                        .available__prices  
+                            each info in [['$10.9 bln','Market cap'],['$7.7 bln','Revenue'],['$1 bln','Net profit']]
+                                .available__price   
+                                    .available__priceNum= info[0]
+                                    .available__priceDescr= info[1]
+                        a(class='available__link seeBtn') see more
+        .projects 
+            .container  
+                .projects__items 
+                    h2.projectst__title TOP PROJECTS
+                    each info in [['CREEK RISE','FROM AED 2,288,888','1'],['EXPO GOLF VILLAS 6','FROM AED 2,288,888','2'],['HILLS PARK','FROM AED 2,288,888','3']]
+                        .projects__item 
+                            img(src=`./images/content/content-${info[2]}.jpg`, alt="content image")
+                            .projects__itemLayer    
+                                h4.projects__title= info[0] 
+                                p.projects__descr= info[1]
+        .location 
+            .container  
+                .location__inner 
+                    h3(class='location__title title') choose the best location for you
+                    .location__imagebox 
+                        img(src="./images/map.png", alt="map image")
+                    each name in ['DUBAI CREEK HARBOUR','DUBAI HILLS ESTATE','EMAAR SOUTH']
+                        .location__dot 
+                            .location__info
+                                .location__dotImagebox 
+                                    img(src="./images/content/content-4.png", alt="dot image",class='location__dotImage')
+                                p.location__dotText= name 
+        .appartments 
+            .container 
+                .appartments__inner 
+                    .appartments__menu
+                        .appartments__menuBlock
+                            h4.appartments__title community
+                            .appartments__box 
+                                each radio in [['1','DUBAI CREEK HARBOUR'],['2','DUBAI HILLS ESTATE'],['3','EMAAR SOUTH']]
+                                    .apparments__boxItem
+                                        input(type="radio",name='appartChoice' id=`appartChoice${radio[0]}`)
+                                        label(for=`appartChoice${radio[0]}`)= radio[1]
+                            .appartments_box
+                            h4.appartments__title Projects
+                            .appartments__box 
+                                each item  in [['CREEK RISE','#'], ['THE COVE','#'],[ 'CREEK GATE','#']]
+                                    a(href= item[1],class='appartments__boxItem')= item[0]
+                    .appartments__items 
+                        .appartements__item 
+                            .appartments__infoBox
+                                .appartments__imagebox
+                                    img(src="./images/content/content-4.png", alt="content image")
+                                .appartments__info
+                                    h4.appartments__infoTitle creek rise
+                                    p.appartments__text At Dubai Creek Harbour, you will experience more of what really matters. More laughs shared with friends. More memories made. A thriving community to live, work, play, and capture moments to behold and cherish. A home where every view is a view to live for.
+                            div(class='appartments__slider swiper')
+                                .appartments__sliderTop 
+                                    h4.appartments__sliderTitle AVAILABLE UNITS
+                                    div(class='appartments__pagination swiper-pagination')
+                                div(class='appartments__prev swiper-button-prev')
+                                div(class='appartments__wrapper swiper-wrapper')
+                                    div(class='appartments__slide swiper-slide') Slide 2
+                                    div(class='appartments__slide swiper-slide') Slide 3
+                                    div(class='appartments__slide swiper-slide') Slide 4
+                                div(class='appartments__next swiper-button-next')
+
+
+        script(src="./js/main.min.js") 
+
+
+        
