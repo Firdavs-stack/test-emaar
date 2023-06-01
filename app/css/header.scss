@@ -1,0 +1,58 @@
+@use "./mixins";
+@import "./colors.scss";
+
+.header {
+   position: relative;
+   background-image: url("../images/header.jpg");
+   background-repeat: no-repeat;
+   background-position: top left;
+   background-size: cover;
+   min-height: 100vh;
+   margin-bottom: 153px;
+   &__logo,
+   &__line,
+   &__subtitle {
+      display: block;
+      margin-bottom: 30px;
+   }
+   &__line {
+      width: 100px;
+      height: 1px;
+      background-color: $white;
+   }
+   &__textInfo {
+      min-width: 382px;
+      min-height: 431px;
+      @include mixins.fontAlethia;
+      padding: 30px;
+      background: rgba(7, 28, 53, 0.5);
+      backdrop-filter: blur(7.5px);
+      position: absolute;
+      left: 70px;
+      bottom: 70px;
+      color: $white;
+   }
+   &__subtitle {
+      max-width: 230px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+   }
+   &__adv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+   }
+   &__advItem {
+      h4 {
+         font-size: 20px;
+         text-transform: uppercase;
+         margin-bottom: 30px;
+      }
+      p {
+         @include mixins.fontLatoReg;
+         color: $light-gray;
+         max-width: 61px;
+      }
+   }
+}

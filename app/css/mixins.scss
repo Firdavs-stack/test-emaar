@@ -1,0 +1,26 @@
+@mixin fontAlethia {
+   font-family: "AlethiaNextRegular", sans-serif;
+   font-weight: 400;
+}
+@mixin fontLatoReg {
+   font-family: "LatoRegular", sans-serif;
+   font-weight: 400;
+}
+@mixin fontLatoMed {
+   font-family: "LatoMedium", sans-serif;
+   font-weight: 500;
+}
+@mixin fontLatoLig {
+   font-family: "LatoLight", sans-serif;
+   font-weight: 300;
+}
+@mixin displCent {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+@mixin displBet {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}

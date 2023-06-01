@@ -6,24 +6,22 @@ html(lang='en')
         title EMAAR
     body
         .header
-            .container
-                .header__textInfo
-                    a(class='logo header__logo')
-                        img(src="./images/icons/filled-logo.svg", alt="logo image")
-                    div(class='header__line')
-                    h2(class='subtitle header__subtitle')
-                    div(class='header__adv adv')
-                        each info in [['20%','to book a unit'],['4 years','paymant plan'],['aed 2.2mln','prices from']]
-                            .header__advItem
-                                h4.adv__title= info[0]
-                                p.adv__text= info[1]
-                    a(class='header__link link') See project
+            .header__textInfo
+                a(href='#',class='logo header__logo')
+                    img(src="./images/icons/filled-logo.svg", alt="logo image")
+                div(class='header__line')
+                h2(class='subtitle header__subtitle') Dubai creek harbour
+                div(class='header__adv adv')
+                    each info in [['20%','to book a unit'],['4 years','paymant plan'],['aed 2.2mln','prices from']]
+                        .header__advItem
+                            h4.adv__title= info[0]
+                            p.adv__text= info[1]
+                a(class='header__link link') See project
         .available
             .container 
                 .available__items
-                    .available__item
-                        .available__imagebox
-                            img(src="./images/avialines.png", alt="available image",class='available__image')  
+                    .available__imagebox
+                        img(src="./images/avialines.png", alt="available image",class='available__image')  
                     .available__item 
                         h3(class='available__title title') AVAILABLE HOMES FOR SALE BY EMAAR PROPERTIES
                         p(class='available__text text') Emaar Properties is one of the world’s most valuable and admired real estate development companies. With proven competencies in properties, shopping malls & retail and hospitality & leisure.Emaar Properties is one of the world’s most valuable and admired real estate development companies
@@ -85,13 +83,171 @@ html(lang='en')
                                     div(class='appartments__pagination swiper-pagination')
                                 div(class='appartments__prev swiper-button-prev')
                                 div(class='appartments__wrapper swiper-wrapper')
-                                    div(class='appartments__slide swiper-slide') Slide 2
-                                    div(class='appartments__slide swiper-slide') Slide 3
-                                    div(class='appartments__slide swiper-slide') Slide 4
-                                div(class='appartments__next swiper-button-next')
+                                    
+                                    // without loop, because of the futility оf them
 
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-9.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle creek rise
+                                            span.appartments__slideBed bedrooms 1-3
+                                            p.appartments__text Creek Rise comprises two beautifully designed residential high-rises with unparalleled views overlooking the Creek Island’s lush parkland, set in a family-oriented neighbourhood.
+                                            span.appartments__price FROM AED 2 288 888
+                                            a(class='appartments__link seeBtn') get details 
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-9.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle creek rise
+                                            span.appartments__slideBed bedrooms 1-3
+                                            p.appartments__text Creek Rise comprises two beautifully designed residential high-rises with unparalleled views overlooking the Creek Island’s lush parkland, set in a family-oriented neighbourhood.
+                                            span.appartments__price FROM AED 2 288 888
+                                            a(class='appartments__link seeBtn') get details
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-9.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle creek rise
+                                            span.appartments__slideBed bedrooms 1-3
+                                            p.appartments__text Creek Rise comprises two beautifully designed residential high-rises with unparalleled views overlooking the Creek Island’s lush parkland, set in a family-oriented neighbourhood.
+                                            span.appartments__price FROM AED 2 288 888
+                                            a(class='appartments__link seeBtn') get details 
+                                div(class='appartments__next swiper-button-next')
+                        .appartements__item 
+                            .appartments__infoBox
+                                .appartments__imagebox
+                                    img(src="./images/content/content-5.png", alt="content image")
+                                .appartments__info
+                                    h4.appartments__infoTitle the cove
+                                    p.appartments__text Dubai Hills Estate is located in a prestigious area, Mohammed Bin Rashid City. The community features 18-hole championship golf course, 2 mln sq. ft. shopping center with sought after stores, restaurants, cafes, Tennis Academy with 10 outdoor and 4 indoor courts and Dubai Hills Park, which is the largest residential community park in Dubai.
+                            div(class='appartments__slider swiper')
+                                .appartments__sliderTop 
+                                    h4.appartments__sliderTitle AVAILABLE UNITS
+                                    div(class='appartments__pagination swiper-pagination')
+                                div(class='appartments__prev swiper-button-prev')
+                                div(class='appartments__wrapper swiper-wrapper')
+                                    
+                                    // without loop, because of the futility оf them
+
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-6.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle PARK FIELD
+                                            span.appartments__slideBed bedrooms 1-3
+                                            p.appartments__text Embrace an urban lifestyle immeresed in nature in the green heart of Dubai. Surrounded by a seamless blend of green open spaces, exceptional amenities, recreational facilities.
+                                            span.appartments__price FROM AED 1 247 888
+                                            a(class='appartments__link seeBtn') get details 
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-6.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle PARK FIELD
+                                            span.appartments__slideBed bedrooms 1-3
+                                            p.appartments__text Embrace an urban lifestyle immeresed in nature in the green heart of Dubai. Surrounded by a seamless blend of green open spaces, exceptional amenities, recreational facilities.
+                                            span.appartments__price FROM AED 1 247 888
+                                            a(class='appartments__link seeBtn') get details 
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-6.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle PARK FIELD
+                                            span.appartments__slideBed bedrooms 1-3
+                                            p.appartments__text Embrace an urban lifestyle immeresed in nature in the green heart of Dubai. Surrounded by a seamless blend of green open spaces, exceptional amenities, recreational facilities.
+                                            span.appartments__price FROM AED 1 247 888
+                                            a(class='appartments__link seeBtn') get details  
+                                div(class='appartments__next swiper-button-next')
+                        .appartements__item 
+                            .appartments__infoBox
+                                .appartments__imagebox
+                                    img(src="./images/content/content-7.png", alt="content image")
+                                .appartments__info
+                                    h4.appartments__infoTitle creek gate
+                                    p.appartments__text Be part of Dubai’s future. Live in a new community that supports your visions, where you can be an innovator and achieve your ambitions. Say hello to your future at Emaar South.
+                            div(class='appartments__slider swiper')
+                                .appartments__sliderTop 
+                                    h4.appartments__sliderTitle AVAILABLE UNITS
+                                    div(class='appartments__pagination swiper-pagination')
+                                div(class='appartments__prev swiper-button-prev')
+                                div(class='appartments__wrapper swiper-wrapper')
+                                    
+                                    // without loop, because of the futility оf them
+
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-8.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle URBANA
+                                            span.appartments__slideBed bedrooms 2-3
+                                            p.appartments__text The perfect balance of innovation and suburban charm, this delightful community is home to 2 and 3-bedroom tiered and standard townhouses.
+                                            span.appartments__price FROM AED 1 138 888
+                                            a(class='appartments__link seeBtn') get details 
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-8.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle URBANA
+                                            span.appartments__slideBed bedrooms 2-3
+                                            p.appartments__text The perfect balance of innovation and suburban charm, this delightful community is home to 2 and 3-bedroom tiered and standard townhouses.
+                                            span.appartments__price FROM AED 1 138 888
+                                            a(class='appartments__link seeBtn') get details
+                                    div(class='appartments__slide swiper-slide')
+                                        .appartments__slideImageBox 
+                                            img(src="./images/content/content-8.png", alt="slider image")
+                                        .appartments__slideInfo 
+                                            h4.appartments__slideTitle URBANA
+                                            span.appartments__slideBed bedrooms 2-3
+                                            p.appartments__text The perfect balance of innovation and suburban charm, this delightful community is home to 2 and 3-bedroom tiered and standard townhouses.
+                                            span.appartments__price FROM AED 1 138 888
+                                            a(class='appartments__link seeBtn') get details 
+                                div(class='appartments__next swiper-button-next')
+        .options
+            .container
+                .options__items 
+                    .options__item 
+                        .options__imagebox 
+                            img(src="./images/payment.png", alt="payment image")
+                        .options__infobox 
+                            h2.options__title payment option
+                            p.options__text Emaar properties offer various payment options to help make your property purchase as stress-free as possible. Some project have up to 3 Years payment plan and we also offer mortgage option for ready units. Click "Enquire Now" below to get more information about payment options available for your purchase.
+                            a(class='options__link reqBtn') enquire now
+                    .options__item 
+                        .options__imagebox 
+                            img(src="./images/about.png", alt="about image")
+                        .options__infobox 
+                            h2.options__title MORE ABOUT EMAAR
+                            p.options__text Emaar is the master-developer of Downtown Dubai, which occupies two of the most prestigious square kilometres in Dubai. Flanked on either side by Sheikh Zayed Road and Financial Centre Road, this dynamic city hub has catalysed the economy and cemented Dubai’s reputation as a true global icon. Providing the ultimate metropolitan lifestyle abounding with world-class landmarks, entertainment and glamour, Downtown Dubai is a true heart of the emirate.
+        footer.footer 
+            .container 
+                .footer__inner 
+                    .footer__imagebox 
+                        img(src="./images/woman.png", alt="footer image")
+                    .footer__item 
+                        h3(class='footer__title title') SPEAK TO A SPECIALIST
+                        .decor 
+                        .footer__info 
+                            span.footer__status We are Online
+                            p.footer__text Contact us below to get limited availability, payment plan and to book a unit.
+                        form .footer__form 
+                            input(type="text",placeholder='Your name')
+                            input(type="text",placeholder='Your email')
+                            input(type="text",placeholder='Phone number')
+                            button(type='submit',class='reqBtn') request a call
+                        .footer__bottom 
+                            .footer__bottomItem 
+                                ul.menu 
+                                    li top projects
+                                    li community
+                                    li payment option
+                                .contacts 
+                                    a(type='tel',class='footer__phone') 971 56XXX-XX-XX   SHOW
+                                    a(href='#',class='footer__link telegram-link') telegram
+                                    a(href='#',class='footer__link instagram-link') telegram
+                            .footer__bottomItem 
+                                img(src="./images/icons/logo.svg", alt="logo image")
 
         script(src="./js/main.min.js") 
 
 
-        
+    

@@ -19,7 +19,11 @@ const cleanDist = () => {
 
 export const compileScss = () => {
    return gulp
-      .src(["app/css/**/*.scss", "node_modules/swiper/swiper.scss"])
+      .src([
+         "app/css/**/*.scss",
+         "node_modules/swiper/swiper.scss",
+         "node_modules/normalize.css/normalize.css",
+      ])
       .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
       .pipe(concat("styles.min.css"))
       .pipe(prefixer({ cascade: false }))

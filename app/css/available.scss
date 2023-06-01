@@ -1,0 +1,47 @@
+@use "./mixins";
+@import "./colors.scss";
+.available {
+   margin-bottom: 185px;
+   &__items {
+      @include mixins.displBet;
+   }
+   &__imagebox {
+      position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-image: url("../images/avialines-overfow.png");
+         background-repeat: no-repeat;
+      }
+   }
+   &__title {
+      margin-bottom: 30px;
+   }
+   &__text {
+      max-width: 619px;
+      margin-bottom: 50px;
+   }
+   &__item {
+      flex: 0 1 651px;
+   }
+   &__prices {
+      @include mixins.displBet;
+      margin-bottom: 50px;
+   }
+   &__priceNum {
+      @include mixins.fontAlethia;
+      font-size: 44px;
+      color: $dark-blue;
+      margin-bottom: 10px;
+   }
+   &__priceDescr {
+      @include mixins.fontLatoLig;
+      color: $gray;
+      font-size: 16px;
+      text-transform: uppercase;
+   }
+}
