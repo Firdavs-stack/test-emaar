@@ -33,14 +33,16 @@ html(lang='en')
                         a(class='available__link seeBtn') see more
         .projects 
             .container  
+                h2.projects__title TOP PROJECTS
                 .projects__items 
-                    h2.projectst__title TOP PROJECTS
-                    each info in [['CREEK RISE','FROM AED 2,288,888','1'],['EXPO GOLF VILLAS 6','FROM AED 2,288,888','2'],['HILLS PARK','FROM AED 2,288,888','3']]
+                    each info in [['CREEK RISE','AED 2,288,888','1'],['EXPO GOLF VILLAS 6','AED 2,288,888','2'],['HILLS PARK','AED 2,288,888','3']]
                         .projects__item 
-                            img(src=`./images/content/content-${info[2]}.jpg`, alt="content image")
-                            .projects__itemLayer    
-                                h4.projects__title= info[0] 
-                                p.projects__descr= info[1]
+                            .projects__itemImagebox 
+                                img(class='projects__image',src=`./images/content/content-${info[2]}.jpg`, alt="content image")
+                                .projects__itemLayer    
+                                    h4.projects__itemTitle= info[0] 
+                                    p.projects__itemDescr FROM 
+                                        span= info[1]
         .location 
             .container  
                 .location__inner 

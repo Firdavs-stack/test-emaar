@@ -1,0 +1,59 @@
+@use "./mixins.scss";
+@import "./colors.scss";
+
+.location {
+   &__inner {
+      position: relative;
+   }
+   &__title {
+      position: absolute;
+      top: 268px;
+      left: -21px;
+      max-width: 457px;
+   }
+   &__dot {
+      position: absolute;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      top: 221px;
+      right: 500px;
+      border-radius: 50%;
+      background-color: $dark-blue;
+      &:first-child {
+         top: 221px;
+         right: 591px;
+      }
+      &:nth-child(3) {
+         top: 350px;
+         left: 553px;
+      }
+      &:last-child {
+         bottom: 112px;
+         left: 417px;
+      }
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      &::before {
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         background-color: $white;
+      }
+      &::after {
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         background-color: $dark-blue;
+      }
+   }
+   &__info {
+      display: none;
+   }
+}
